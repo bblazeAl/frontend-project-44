@@ -1,6 +1,10 @@
 import readlineSync from "readline-sync";
 const roundCount = 3;
 
+export const getRandomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 export default (description, getQuestionAnswer) => {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
@@ -16,7 +20,7 @@ export default (description, getQuestionAnswer) => {
       console.log("Correct!");
     } else {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}`
+        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
       );
       console.log(`Let's try again, ${name}!`);
       return;
