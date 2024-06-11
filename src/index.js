@@ -9,7 +9,7 @@ export default (description, getQuestionAnswer) => {
 
   console.log(description);
 
-  for (let i = 0; i < roundCount; i++) {
+  for (let i = 0; i < roundCount; i += 1) {
     const [question, correctAnswer] = getQuestionAnswer();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
