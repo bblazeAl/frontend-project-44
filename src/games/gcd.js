@@ -1,8 +1,8 @@
-import game from "../index.js";
+import game from '../index.js';
 
-import { getRandomNumber } from "../utils.js";
+import { getRandomNumber } from '../utils.js';
 
-const description = "Find the greatest common divisor of given numbers.";
+const description = 'Find the greatest common divisor of given numbers.';
 const gcd = (a, b) => {
   if (a < b) {
     [a, b] = [b, a];

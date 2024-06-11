@@ -1,23 +1,23 @@
-import game from "../index.js";
+import game from '../index.js';
 
-import { getRandomNumber } from "../utils.js";
+import { getRandomNumber } from '../utils.js';
 
-const description = "What is the result of the expression?";
+const description = 'What is the result of the expression?';
 const calc = (num1, num2, operation) => {
   switch (operation) {
-    case "+":
+    case '+':
       return num1 + num2;
-    case "-":
+    case '-':
       return num1 - num2;
-    case "*":
+    case '*':
       return num1 * num2;
   }
 };
 const getQuestionAnswer = () => {
-  const operators = ["+", "-", "*"];
+  const operators = ['+', '-', '*'];
   const randomIndex = Math.floor(Math.random() * operators.length);
   const operator = operators[randomIndex];
-  
+
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
 
